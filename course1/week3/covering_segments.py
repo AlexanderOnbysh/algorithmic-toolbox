@@ -4,6 +4,7 @@ from collections import namedtuple
 
 Segment = namedtuple('Segment', 'start end')
 
+
 def optimal_points(segments):
     segments = sorted(segments, key=lambda x: x.end)
     points = []
@@ -13,6 +14,7 @@ def optimal_points(segments):
             current = s.end
             points.append(current)
     return points
+
 
 if __name__ == '__main__':
     input = sys.stdin.read()

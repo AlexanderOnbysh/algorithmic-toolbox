@@ -1,6 +1,7 @@
 # Uses python3
 import sys
 
+
 def get_optimal_value(capacity, weights, values):
     ratio = [v / w for v, w in zip(values, weights)]
     s = sorted(zip(ratio, values, weights), reverse=True)
@@ -10,7 +11,7 @@ def get_optimal_value(capacity, weights, values):
         take = min(capacity_left, weight)
         capacity_left -= take
         total_value += take / weight * value
-        
+
     return total_value
 
 

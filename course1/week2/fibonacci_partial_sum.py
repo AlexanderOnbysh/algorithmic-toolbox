@@ -1,6 +1,7 @@
 # Uses python3
 import sys
 
+
 def pisano(modulo):
     previous = 1
     current = 1
@@ -15,6 +16,7 @@ def pisano(modulo):
 
     return result
 
+
 def fibonacci(number, modulo):
     if number < 2:
         return number
@@ -25,8 +27,10 @@ def fibonacci(number, modulo):
 
     return results[-1]
 
+
 def get_fibonacci_huge_naive(n, m):
     return fibonacci(n % pisano(m), m)
+
 
 def fibonacci_sum_naive(n):
     if n <= 1:
@@ -34,7 +38,8 @@ def fibonacci_sum_naive(n):
     answer = get_fibonacci_huge_naive(n + 2, 10) - 1
     return 9 if answer == -1 else answer
 
-def fibonacci_partial_sum_naive(from_, to):
+
+def fibonacci_partial_sum(from_, to):
     f = fibonacci_sum_naive(from_ - 1)
     t = fibonacci_sum_naive(to)
     return abs(t - f) % 10
@@ -43,4 +48,4 @@ def fibonacci_partial_sum_naive(from_, to):
 if __name__ == '__main__':
     input = sys.stdin.read();
     from_, to = map(int, input.split())
-    print(fibonacci_partial_sum_naive(from_, to))
+    print(fibonacci_partial_sum(from_, to))

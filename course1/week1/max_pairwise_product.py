@@ -7,8 +7,6 @@ def max_pairwise_product(numbers):
     second_max = max(numbers)
     return first_max * second_max
 
-    return max_product
-
 
 if __name__ == '__main__':
     input_n = int(input())

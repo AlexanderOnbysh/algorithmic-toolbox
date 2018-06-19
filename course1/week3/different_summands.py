@@ -1,6 +1,7 @@
 # Uses python3
 import sys
 
+
 def optimal_summands(n):
     summands = []
     i = 1
@@ -10,6 +11,7 @@ def optimal_summands(n):
         n -= add
         i += 1
     return summands
+
 
 if __name__ == '__main__':
     input = sys.stdin.read()
