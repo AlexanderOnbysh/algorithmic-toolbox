@@ -1,7 +1,6 @@
 # Uses python3
-import time
 import sys
-import math
+
 
 def binary_search(a, x):
     left, right = 0, len(a) - 1
